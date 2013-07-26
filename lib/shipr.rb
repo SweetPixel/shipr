@@ -90,7 +90,7 @@ module Shipr
       if ENV['DATABASE_URL']
         ActiveRecord::Base.establish_connection
       else
-        config = YAML.load Pathname('../../config/database.yml').expand_path(__FILE__).read
+        config = YAML.load File.read(File.join(root, 'config', 'database.yml'))
         ActiveRecord::Base.configurations = config
         ActiveRecord::Base.establish_connection(ENV['RACK_ENV'])
       end
@@ -98,6 +98,14 @@ module Shipr
 
     def setup
       connect!
+    end
+
+    def root
+      @root ||= File.expand_path('.')
+    end
+
+    def root=(root)
+      @root = root
     end
 
     # Public: The app itself. The app is split up into many smaller components.

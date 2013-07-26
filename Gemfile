@@ -6,7 +6,7 @@ gem 'rake'
 gem 'unicorn', '~> 4.6.2'
 
 gem 'sinatra-asset-pipeline', github: 'ejholmes/sinatra-asset-pipeline'
-gem 'pg',           '~> 0.15.1'
+gem 'pg', '~> 0.15.1'
 
 group :development do
   gem 'rails', '~> 3.2.13', require: false
