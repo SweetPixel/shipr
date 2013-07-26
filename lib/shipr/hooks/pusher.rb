@@ -1,3 +1,5 @@
+require 'grape'
+
 module Shipr::Hooks
   # Internal: Used to authenticate pusher channels.
   class Pusher < Grape::API

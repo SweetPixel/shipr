@@ -1,5 +1,11 @@
 require 'pathname'
+require 'active_support'
 require 'active_support/core_ext'
+require 'active_record'
+require 'active_model'
+require 'iron_worker_ng'
+require 'iron_mq'
+require 'pusher'
 require 'rack/force_json'
 
 require 'shipr/warden'

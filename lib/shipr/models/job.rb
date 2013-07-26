@@ -1,3 +1,5 @@
+require 'grape-entity'
+
 class Job < ActiveRecord::Base
   include Grape::Entity::DSL
 

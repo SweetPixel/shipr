@@ -1,3 +1,5 @@
+require 'grape'
+
 module Shipr
   class API < Grape::API
     logger Shipr.logger
